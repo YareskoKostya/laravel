@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('members.index',  [
-        'members' => App\Models\Member::where('visible', true)->get()
-    ]);
-});
+//Route::get('/welcome', function () {
+//    return view('welcome');
+//});
+
+
+Route::get('/', 'MembersController@index');
 
 Route::post('members/store', 'MembersController@store')->name('members.store');
 
@@ -23,10 +24,6 @@ Route::post('data/store', 'DataController@store')->name('data.store');
 
 Route::get('list', 'MembersController@list')->name('list');
 
-//Route::get('/welcome', function () {
-//    return view('welcome');
-//});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
