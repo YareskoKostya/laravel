@@ -63,6 +63,8 @@
             <span class="step"></span>
         </div>
 
+        <h2 class="mt-4"><a href="{{ route('list') }}">All members ({{ $members->count() }})</a></h2>
+
     </div>
 
     <script src="{{ asset('js/script.js') }}"></script>
